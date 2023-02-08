@@ -10,8 +10,11 @@ import SwiftUI
 struct ContentView: View {
     
     var body: some View {
-        Button("Go to comment generator") {
-            CommentGenerationView(comments: Comments.exampleComments)
+        NavigationView {
+            Button("Go to comment generator") {
+                NavigationLink(destination: CommentGenerationView(comments: Comments.exampleComments)) {
+                }
+            }
         }
     }
 }
