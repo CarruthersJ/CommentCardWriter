@@ -8,17 +8,20 @@
 import Foundation
 
 class Comments {
-    var comments = [String]()
+    var comments: [String]
     
     init(comments: [String]) {
-        comments = comments
+        self.comments = comments
     }
     
-    func randomComment() {
-        for
+    func generateRandomComment() -> String {
+        let numberOfComments = self.comments.count
+        let randomNumber = Int.random(in: 0 ..< numberOfComments)
+        let randomComment = self.comments[randomNumber]
+        return randomComment
     }
     
     #if DEBUG
-    let exampleComments = Comments(comments: ["Comment 1", "Comment 2", "Comment 3"])
+    static let exampleComments = Comments(comments: ["Comment 1", "Comment 2", "Comment 3"])
     #endif
 }

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E38AED1B2993AE4100A658E9 /* CommentGenerationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38AED1A2993AE4000A658E9 /* CommentGenerationView.swift */; };
+		E38AED1D2993AED500A658E9 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38AED1C2993AED500A658E9 /* Subject.swift */; };
+		E38AED1F2993AF4000A658E9 /* ListOfSubjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38AED1E2993AF4000A658E9 /* ListOfSubjects.swift */; };
 		E3D00523298E6F60006A6829 /* CommentCardWriterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D00522298E6F60006A6829 /* CommentCardWriterApp.swift */; };
 		E3D00525298E6F60006A6829 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D00524298E6F60006A6829 /* ContentView.swift */; };
 		E3D00527298E6F62006A6829 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3D00526298E6F62006A6829 /* Assets.xcassets */; };
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E38AED1A2993AE4000A658E9 /* CommentGenerationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentGenerationView.swift; sourceTree = "<group>"; };
+		E38AED1C2993AED500A658E9 /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
+		E38AED1E2993AF4000A658E9 /* ListOfSubjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfSubjects.swift; sourceTree = "<group>"; };
 		E3D0051F298E6F60006A6829 /* CommentCardWriter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommentCardWriter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3D00522298E6F60006A6829 /* CommentCardWriterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCardWriterApp.swift; sourceTree = "<group>"; };
 		E3D00524298E6F60006A6829 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -99,6 +105,7 @@
 			children = (
 				E3D00522298E6F60006A6829 /* CommentCardWriterApp.swift */,
 				E3D00524298E6F60006A6829 /* ContentView.swift */,
+				E38AED1A2993AE4000A658E9 /* CommentGenerationView.swift */,
 				E3D00526298E6F62006A6829 /* Assets.xcassets */,
 				E3D00528298E6F62006A6829 /* Preview Content */,
 			);
@@ -134,6 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				E3D0054D298E720D006A6829 /* Comments.swift */,
+				E38AED1E2993AF4000A658E9 /* ListOfSubjects.swift */,
+				E38AED1C2993AED500A658E9 /* Subject.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -268,9 +277,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E38AED1B2993AE4100A658E9 /* CommentGenerationView.swift in Sources */,
 				E3D00525298E6F60006A6829 /* ContentView.swift in Sources */,
 				E3D00523298E6F60006A6829 /* CommentCardWriterApp.swift in Sources */,
 				E3D0054E298E720D006A6829 /* Comments.swift in Sources */,
+				E38AED1D2993AED500A658E9 /* Subject.swift in Sources */,
+				E38AED1F2993AF4000A658E9 /* ListOfSubjects.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

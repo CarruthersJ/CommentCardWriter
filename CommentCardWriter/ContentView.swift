@@ -8,24 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var showComment: Bool = false
-    var body: some View {
-        VStack {
-            
-            if showComment {
-                Text("Comment is here")
-            } else {
-                Text("")
-            }
-            Button("Show comment") {
-                toggleShow()
-            }
-            .foregroundColor(.green)
-        }
-    }
     
-    func toggleShow() {
-        showComment.toggle()
+    var body: some View {
+        Button("Go to comment generator") {
+            CommentGenerationView(comments: Comments.exampleComments)
+        }
     }
 }
 
