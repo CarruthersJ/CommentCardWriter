@@ -7,15 +7,20 @@
 
 import Foundation
 
-class ListOfSubjects {
-    var allSubjects: [Subject]
+class ListOfSubjects: ObservableObject {
+   @Published var allSubjects: [Subject]
     
     init() {
         self.allSubjects = [Subject(subject: "Chemistry", teachers: ["JAS"])]
     }
     
-    func addNewSubject(teachers: [String], subjectName: String) {
-        let newSubject = Subject(subject: subjectName, teachers: teachers)
+    func addNewSubject(teachers: String, subjectName: String) {
+        let splitTeachers = teachers.split(separator: Character(", "))
+        var teacherList: [String] = []
+        for teacher in splitTeachers {
+            teacherList.append(String(teacher))
+        }
+        let newSubject = Subject(subject: subjectName, teachers: teacherList)
         self.allSubjects.append(newSubject)
     }
 }

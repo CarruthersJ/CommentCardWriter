@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject private var subjectList: ListOfSubjects
     
     var body: some View {
-        var subjectList = ListOfSubjects()
         VStack {
             NavigationView {
                 List(subjectList.allSubjects, id: \.self.subjectName) { subject in
@@ -20,6 +20,9 @@ struct ContentView: View {
                             Text("\(subject.displayTeachers())")
                         }
                     }
+                }
+                Button("Add new subject") {
+                    NavigationLink(destination: NewSubjectView())
                 }
             }
         }
