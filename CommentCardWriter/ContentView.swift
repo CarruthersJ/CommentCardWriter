@@ -10,9 +10,16 @@ import SwiftUI
 struct ContentView: View {
     
     var body: some View {
-        NavigationView {
-            Button("Go to comment generator") {
-                NavigationLink(destination: CommentGenerationView(comments: Comments.exampleComments)) {
+        var subjectList = ListOfSubjects()
+        VStack {
+            NavigationView {
+                List(subjectList.allSubjects, id: \.self.subjectName) { subject in
+                    NavigationLink(destination: CommentGenerationView(comments: Comments.exampleComments)) {
+                        HStack {
+                            Text("\(subject.subjectName)")
+                            Text("\(subject.displayTeachers())")
+                        }
+                    }
                 }
             }
         }

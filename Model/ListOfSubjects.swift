@@ -11,7 +11,7 @@ class ListOfSubjects {
     var allSubjects: [Subject]
     
     init() {
-        self.allSubjects = [Subject(subject: "chem", teachers: ["JAS"])]
+        self.allSubjects = [Subject(subject: "Chemistry", teachers: ["JAS"])]
     }
     
     func addNewSubject(teachers: [String], subjectName: String) {

@@ -14,11 +14,14 @@ class Comments {
         self.comments = comments
     }
     
-    func generateRandomComment() -> String {
-        let numberOfComments = self.comments.count
-        let randomNumber = Int.random(in: 0 ..< numberOfComments)
-        let randomComment = self.comments[randomNumber]
-        return randomComment
+    func generateRandomComment(previousComment: String) -> String {
+        var newComment = previousComment
+        while newComment == previousComment {
+            let numberOfComments = self.comments.count
+            let randomNumber = Int.random(in: 0 ..< numberOfComments)
+            newComment = self.comments[randomNumber]
+        }
+        return newComment
     }
     
     #if DEBUG

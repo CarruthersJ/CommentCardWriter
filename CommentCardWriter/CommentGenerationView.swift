@@ -24,7 +24,7 @@ struct CommentGenerationView: View {
             }
             .foregroundColor(.green)
             Button("Generate different comment") {
-                currentComment = comments.generateRandomComment()
+                currentComment = comments.generateRandomComment(previousComment: currentComment)
             }
         }
     }

@@ -17,4 +17,13 @@ class Subject {
         self.subjectName = subject
         self.subjectTeachers = teachers
     }
+
+    func displayTeachers() -> String {
+        var teachers = ""
+        for teacher in subjectTeachers {
+            teachers += teacher
+        }
+        return teachers
+    }
+    
 }

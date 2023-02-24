@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E34A623729A8E5FA009E3743 /* NewSubjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34A623629A8E5FA009E3743 /* NewSubjectView.swift */; };
 		E38AED1B2993AE4100A658E9 /* CommentGenerationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38AED1A2993AE4000A658E9 /* CommentGenerationView.swift */; };
 		E38AED1D2993AED500A658E9 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38AED1C2993AED500A658E9 /* Subject.swift */; };
 		E38AED1F2993AF4000A658E9 /* ListOfSubjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38AED1E2993AF4000A658E9 /* ListOfSubjects.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E34A623629A8E5FA009E3743 /* NewSubjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSubjectView.swift; sourceTree = "<group>"; };
 		E38AED1A2993AE4000A658E9 /* CommentGenerationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentGenerationView.swift; sourceTree = "<group>"; };
 		E38AED1C2993AED500A658E9 /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
 		E38AED1E2993AF4000A658E9 /* ListOfSubjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfSubjects.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				E3D00522298E6F60006A6829 /* CommentCardWriterApp.swift */,
 				E3D00524298E6F60006A6829 /* ContentView.swift */,
 				E38AED1A2993AE4000A658E9 /* CommentGenerationView.swift */,
+				E34A623629A8E5FA009E3743 /* NewSubjectView.swift */,
 				E3D00526298E6F62006A6829 /* Assets.xcassets */,
 				E3D00528298E6F62006A6829 /* Preview Content */,
 			);
@@ -280,6 +283,7 @@
 				E38AED1B2993AE4100A658E9 /* CommentGenerationView.swift in Sources */,
 				E3D00525298E6F60006A6829 /* ContentView.swift in Sources */,
 				E3D00523298E6F60006A6829 /* CommentCardWriterApp.swift in Sources */,
+				E34A623729A8E5FA009E3743 /* NewSubjectView.swift in Sources */,
 				E3D0054E298E720D006A6829 /* Comments.swift in Sources */,
 				E38AED1D2993AED500A658E9 /* Subject.swift in Sources */,
 				E38AED1F2993AF4000A658E9 /* ListOfSubjects.swift in Sources */,
