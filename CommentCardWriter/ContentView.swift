@@ -13,16 +13,19 @@ struct ContentView: View {
     var body: some View {
         VStack {
             NavigationView {
-                List(subjectList.allSubjects, id: \.self.subjectName) { subject in
-                    NavigationLink(destination: CommentGenerationView(comments: Comments.exampleComments)) {
-                        HStack {
-                            Text("\(subject.subjectName)")
-                            Text("\(subject.displayTeachers())")
+                VStack {
+                    List(subjectList.allSubjects, id: \.self.subjectName) { subject in
+                        NavigationLink(destination: CommentGenerationView(comments: Comments.exampleComments)) {
+                            HStack {
+                                Text("\(subject.subjectName)")
+                                Text("\(subject.displayTeachers())")
+                            }
                         }
                     }
-                }
-                Button("Add new subject") {
-                    NavigationLink(destination: NewSubjectView())
+                    NavigationLink(destination: NewSubjectView()) {
+                            Text("Add new subject")
+                                .foregroundColor(.blue)
+                    }
                 }
             }
         }
@@ -32,5 +35,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(ListOfSubjects())
     }
 }
