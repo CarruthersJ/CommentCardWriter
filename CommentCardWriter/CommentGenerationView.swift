@@ -9,27 +9,38 @@ import SwiftUI
 
 struct CommentGenerationView: View {
     let comments : Comments
-    let subjectName : String
+    let subject : Subject
     @State private var currentComment: String = "No comment generated."
     @State private var showComment: Bool = false
     var body: some View {
-        VStack {
-            
-            if showComment {
-                Text(currentComment)
-            } else {
-                Text("")
-            }
-            Button("Show comment") {
-                toggleShow()
-            }
-            .foregroundColor(.green)
-            Button("Generate different comment") {
-                currentComment = comments.generateRandomComment(previousComment: currentComment)
+        Form {
+            VStack {
+                HStack {
+                    Text("This is \(subject.subjectName)")
+                }
+                Section {
+                    VStack(alignment: .leading, spacing: 15) {
+                        if showComment {
+                            Text(currentComment)
+                        } else {
+                            Text("")
+                        }
+                        Divider()
+                        Button("Show comment") {
+                            toggleShow()
+                        }
+                        Divider()
+                        .foregroundColor(.green)
+                        Divider()
+                        Button("Generate different comment") {
+                                currentComment = comments.generateRandomComment(previousComment: currentComment)
+                        }
+                    }
+                }
             }
         }
+        
     }
-    
     func toggleShow() {
         showComment.toggle()
     }
@@ -37,6 +48,6 @@ struct CommentGenerationView: View {
 
 struct CommentGenerationView_Previews: PreviewProvider {
     static var previews: some View {
-        CommentGenerationView(comments: Comments.exampleComments)
+        CommentGenerationView(comments: Comments.exampleComments, subject: Subject(subject: "Chemistry", teachers: ["JAS"]))
     }
 }

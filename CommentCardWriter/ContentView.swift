@@ -15,7 +15,7 @@ struct ContentView: View {
             NavigationView {
                 VStack {
                     List(subjectList.allSubjects, id: \.self.subjectName) { subject in
-                        NavigationLink(destination: CommentGenerationView(comments: Comments.exampleComments)) {
+                        NavigationLink(destination: CommentGenerationView(comments: Comments.exampleComments, subject: subject)) {
                             HStack {
                                 Text("\(subject.subjectName)")
                                 Text("\(subject.displayTeachers())")

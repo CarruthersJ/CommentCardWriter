@@ -18,22 +18,26 @@ class ListOfSubjects: ObservableObject {
         var subjectInList: Subject = Subject(subject: "", teachers: [])
         var alreadyExists = false
         var splitTeachers : Array<Any>
+        var teacherList: [String] = []
+        
         if teachers.contains(",") {
             splitTeachers = teachers.split(separator: ",")
         } else {
             splitTeachers = [teachers]
         }
-        var teacherList: [String] = []
         for teacher in splitTeachers {
             teacherList.append("\(teacher)")
         }
+        
         let newSubject = Subject(subject: subjectName, teachers: teacherList)
+        
         for subject in self.allSubjects {
             if subject.subjectName == newSubject.subjectName {
                 alreadyExists = true
                 subjectInList = subject
             }
         }
+        
         if alreadyExists == false {
             self.allSubjects.append(newSubject)
         } else {
