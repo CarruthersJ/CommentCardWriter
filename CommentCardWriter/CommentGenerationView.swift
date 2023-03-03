@@ -14,33 +14,28 @@ struct CommentGenerationView: View {
     @State private var showComment: Bool = false
     var body: some View {
         Form {
-            VStack {
-                HStack {
-                    Text("This is \(subject.subjectName)")
-                }
-                Section {
-                    VStack(alignment: .leading, spacing: 15) {
-                        if showComment {
-                            Text(currentComment)
-                        } else {
-                            Text("")
-                        }
-                        Divider()
-                        Button("Show comment") {
-                            toggleShow()
-                        }
-                        Divider()
-                        .foregroundColor(.green)
-                        Divider()
-                        Button("Generate different comment") {
-                                currentComment = comments.generateRandomComment(previousComment: currentComment)
-                        }
+            Section {
+                VStack {
+                    HStack {
+                        Text("This is \(subject.subjectName)")
                     }
                 }
             }
+            if showComment {
+                Text(currentComment)
+            } else {
+                Text("")
+            }
+            Button("Show comment") {
+                toggleShow()
+            }
+            .foregroundColor(.green)
+            Button("Generate different comment") {
+                currentComment = comments.generateRandomComment(previousComment: currentComment)
+            }
         }
-        
     }
+        
     func toggleShow() {
         showComment.toggle()
     }
