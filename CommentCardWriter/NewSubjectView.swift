@@ -16,8 +16,8 @@ struct NewSubjectView: View {
     var body: some View {
         Form {
             VStack {
-                        TextField("What is your new subject name?", text: $newSubjectName)
-                        TextField("Enter your new subject teachers with a comma between each", text: $newSubjectTeachers)
+                        TextField("Subject name", text: $newSubjectName)
+                        TextField("Subject teachers, separated by a comma", text: $newSubjectTeachers)
                     }
             Button("Generate new subject") {
                 listOfSubjects.addNewSubject(teachers: newSubjectTeachers, subjectName: newSubjectName)

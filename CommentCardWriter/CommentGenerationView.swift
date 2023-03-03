@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CommentGenerationView: View {
     let comments : Comments
+    let subjectName : String
     @State private var currentComment: String = "No comment generated."
     @State private var showComment: Bool = false
     var body: some View {
