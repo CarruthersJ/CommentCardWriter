@@ -16,9 +16,10 @@ struct NewSubjectView: View {
     var body: some View {
         Form {
             VStack {
-                        TextField("Subject name", text: $newSubjectName)
-                        TextField("Subject teachers, separated by a comma", text: $newSubjectTeachers)
-                    }
+                TextField("Subject name", text: $newSubjectName)
+                Divider()
+                TextField("Subject teachers, separated by a comma", text: $newSubjectTeachers)
+            }
             Button("Generate new subject") {
                 listOfSubjects.addNewSubject(teachers: newSubjectTeachers, subjectName: newSubjectName)
             }

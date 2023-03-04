@@ -20,6 +20,10 @@ class ListOfSubjects: ObservableObject {
         var splitTeachers : Array<Any>
         var teacherList: [String] = []
         
+        if teachers == "" || subjectName == "" {
+            return
+        }
+        
         if teachers.contains(",") {
             splitTeachers = teachers.split(separator: ",")
         } else {

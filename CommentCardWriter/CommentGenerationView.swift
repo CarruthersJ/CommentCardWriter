@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CommentGenerationView: View {
+    var subjectList : ListOfSubjects
     let comments : Comments
     let subject : Subject
     @State private var currentComment: String = "No comment generated."
@@ -34,6 +35,10 @@ struct CommentGenerationView: View {
                 currentComment = comments.generateRandomComment(previousComment: currentComment)
             }
         }
+        Spacer()
+        Button("Delete subject") {
+            subjectList.removeSubject(subjectToRemove: subject)
+        } .foregroundColor(.red)
     }
         
     func toggleShow() {
@@ -43,6 +48,6 @@ struct CommentGenerationView: View {
 
 struct CommentGenerationView_Previews: PreviewProvider {
     static var previews: some View {
-        CommentGenerationView(comments: Comments.exampleComments, subject: Subject(subject: "Chemistry", teachers: ["JAS"]))
+        CommentGenerationView(subjectList: ListOfSubjects(), comments: Comments.exampleComments, subject: Subject(subject: "Chemistry", teachers: ["JAS"]))
     }
 }
