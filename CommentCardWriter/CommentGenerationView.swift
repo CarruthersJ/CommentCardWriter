@@ -13,6 +13,8 @@ struct CommentGenerationView: View {
     let subject : Subject
     @State private var currentComment: String = "No comment generated."
     @State private var showComment: Bool = false
+    @State private var levelOfAchievement: Double = 5
+    
     var body: some View {
         Form {
             Section {
@@ -35,11 +37,16 @@ struct CommentGenerationView: View {
             Button("Generate different comment") {
                 currentComment = comments.generateRandomComment(previousComment: currentComment)
             }
-        }
+            Section(footer: "What is your level of achievement") {
+                Slider(value: $levelOfAchievement, in: 0...10) {
+                    Text("What is your level of achievement")
+                }
+            }
         Spacer()
         Button("Delete subject") {
             subjectList.removeSubject(subjectToRemove: subject)
         } .foregroundColor(.red)
+    }
     }
         
     func toggleShow() {
