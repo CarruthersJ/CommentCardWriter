@@ -18,7 +18,8 @@ struct CommentGenerationView: View {
             Section {
                 VStack {
                     HStack {
-                        Text("This is \(subject.subjectName)")
+                        Text("This is \(subject.subjectName), ")
+                        Text("Teachers: \(subject.displayTeachers())")
                     }
                 }
             }
